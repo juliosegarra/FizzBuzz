@@ -1,9 +1,9 @@
 const fizzBtn = document.getElementById("fizzBtn");
 
 fizzBtn.addEventListener("click", function () {
-    let num1 = document.getElementById("num1").value;
-    let num2 = document.getElementById("num2").value;
-    let fizzResults = document.getElementById("fizzResults");
+    const num1 = document.getElementById("num1").value;
+    const num2 = document.getElementById("num2").value;
+    const fizzResults = document.getElementById("fizzResults");
     fizzResults.innerHTML = "";
 
     for (let i = 1; i <= 100; i++) {

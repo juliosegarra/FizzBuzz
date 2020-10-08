@@ -13,7 +13,8 @@
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="Content/bootstrap.min.css">
     <!-- Prism Code Theme -->
-    <link href="Conent/prism-synthwave84.css" rel="stylesheet" />
+    <link href="Content/prism-synthwave84.css" rel="stylesheet" />
+    <!--<link href="prism.css" rel="stylesheet" />-->
     <!-- Custom CSS -->
     <link rel="icon" type="image/x-icon" href="Icons/favicon.ico" />
     <link rel="stylesheet" href="Content/custom_styles.css">
@@ -59,16 +60,131 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h1 class="mt-5">This Page shows your JS code</h1>
-                <p class="lead">You need to use a Syntax Highlighter - Prism.js is default</p>
-                <ul class="list-unstyled">
-                    <li>Code with highlighter</li>
-                    <li>Will display on this page</li>
+                <h1 class="mt-5">Fizz Buzz Code</h1>
+                <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">JavaScript</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">HTML</a>
+                    </li>
                 </ul>
-            </div>
+            </div>             
         </div>
     </div>
 
+    <div class="collapse multi-collapse code" id="multiCollapseExample1">    
+        <pre class="language-markup">
+            <code class="language-markup">
+                &lt;div class="container"&gt;
+                    &lt;div class="row"&gt;
+                        &lt;div class="col-lg-12"&gt;
+                            &lt;h1 class="mt-5 text-center"&gt;Fizz Buzz Coding Challenge&lt;/h1&gt;
+                            &lt;form&gt;
+                                &lt;div class="form-group row"&gt;
+                                    &lt;label for="num1" class="col-sm-2 col-form-label"&gt;Enter First Number: &lt;/label&gt;
+                                    &lt;div class="col-sm-10"&gt;
+                                        &lt;input type="email" class="form-control" id="num1"&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                                &lt;div class="form-group row"&gt;
+                                    &lt;label for="num2" class="col-sm-2 col-form-label"&gt;Enter Second Number: &lt;/label&gt;
+                                    &lt;div class="col-sm-10"&gt;
+                                        &lt;input class="form-control" id="num2"&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                                &lt;div class="form-group row"&gt;
+                                    &lt;div class="col-sm-10"&gt;
+                                        &lt;button id="fizzBtn" type="button" class="btn btn-primary"&gt;Click To Fizz Buzz&lt;/button&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                                &lt;div class="row"&gt;
+                                    &lt;div class="col"&gt;
+                                        &lt;div class="row bg-dark text-white p-1"&gt;Results for Fizz Buzz&lt;/div&gt;
+                                        &lt;div class="row"&gt;
+                                            &lt;textarea class="form-control" name="fizzResults" id="fizzResults" rows="10" style="resize: none;" readonly&gt;&lt;/textarea&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/form&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            </code>
+        </pre>    
+    </div>
+    
+
+    <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+            <pre class="line-numbers">
+                <code class="language-js">
+                    const fizzBtn = document.getElementById("fizzBtn");
+            
+                    fizzBtn.addEventListener("click", function () {
+                        const num1 = document.getElementById("num1").value;
+                        const num2 = document.getElementById("num2").value;
+                        const fizzResults = document.getElementById("fizzResults");
+                        fizzResults.innerHTML = "";
+            
+                        for (let i = 1; i <= 100; i++) {
+                            if (i % num1 === 0 && i % num2 === 0) {
+                                document.getElementById("fizzResults").innerHTML += `FizzBuzz `;
+                            } else if (i % num1 === 0) {
+                                document.getElementById("fizzResults").innerHTML += `Fizz `;
+                            } else if (i % num2 === 0) {
+                                document.getElementById("fizzResults").innerHTML += `Buzz `;
+                            } else {
+                                document.getElementById("fizzResults").innerHTML += `${i} `;
+                            }
+                        }
+                    });
+                </code>
+            </pre>
+        </div>
+        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+            <pre class="language-markup">
+                <code class="language-markup">
+                    &lt;div class="container"&gt;
+                        &lt;div class="row"&gt;
+                            &lt;div class="col-lg-12"&gt;
+                                &lt;h1 class="mt-5 text-center"&gt;Fizz Buzz Coding Challenge&lt;/h1&gt;
+                                &lt;form&gt;
+                                    &lt;div class="form-group row"&gt;
+                                        &lt;label for="num1" class="col-sm-2 col-form-label"&gt;Enter First Number: &lt;/label&gt;
+                                        &lt;div class="col-sm-10"&gt;
+                                            &lt;input type="email" class="form-control" id="num1"&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class="form-group row"&gt;
+                                        &lt;label for="num2" class="col-sm-2 col-form-label"&gt;Enter Second Number: &lt;/label&gt;
+                                        &lt;div class="col-sm-10"&gt;
+                                            &lt;input class="form-control" id="num2"&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class="form-group row"&gt;
+                                        &lt;div class="col-sm-10"&gt;
+                                            &lt;button id="fizzBtn" type="button" class="btn btn-primary"&gt;Click To Fizz Buzz&lt;/button&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class="row"&gt;
+                                        &lt;div class="col"&gt;
+                                            &lt;div class="row bg-dark text-white p-1"&gt;Results for Fizz Buzz&lt;/div&gt;
+                                            &lt;div class="row"&gt;
+                                                &lt;textarea class="form-control" name="fizzResults" id="fizzResults" rows="10" style="resize: none;" readonly&gt;&lt;/textarea&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/form&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                </code>
+            </pre>
+        </div>
+    </div>
+
+    
     <!-- Bootstrap core JavaScript -->
     <script src="Scripts/jquery-3.5.1.slim.min.js"></script>
     <script src="Scripts/prism.js"></script>
@@ -78,3 +194,19 @@
 </body>
 
 </html>
+
+
+<!-- <div class="btn-group-lg"></div>
+<button class="btn-lg btn-primary" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">
+    HTML
+</button>
+<button class="btn-lg btn-primary" type="button" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2" data-toggle="tab">
+    JavaScript
+</button>
+</div> -->
+
+<!-- <div class="collapse multi-collapse code" id="multiCollapseExample2">
+    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+</div> -->
+
+<!-- Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. -->
