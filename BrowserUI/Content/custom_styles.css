@@ -1,0 +1,29 @@
+body {
+    background-color: linen;
+}
+
+body, html {
+    height: 100%;
+}
+
+.bg {
+    /* The image used */
+    background-image: url(#);
+    /* Full height */
+    height: 100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+@media only screen and (max-width: 1370px) {
+  /* For mobile phones: */
+  .col-10 {
+    min-width: 100% !important;
+  }
+}
