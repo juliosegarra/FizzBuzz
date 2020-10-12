@@ -98,6 +98,7 @@
     <Content Include="Content\prism-synthwave84.css" />
     <Content Include="Content\prism.css" />
     <Content Include="Icons\favicon.ico" />
+    <Content Include="Images\FizzBuzz.png" />
     <Content Include="index.html" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\custom_scripts.js" />
@@ -156,7 +157,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Fonts\" />
-    <Folder Include="Images\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
